@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='try'>
+  <head>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/app/app.config.js"></script>
+    <script src="./js/app/app.module.js"></script>
+
+    <style>
+        .new-class {
+            font-size: 72px;
+        }
+
+        .other-class {
+            font-size: {{ font }};
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1 class='new-class' ng-class="{'other-class': name}"> Hello 
+        <!-- ng-class if name variable is true, then use this other class -->
+        <!-- can also specify conditional there! instead of just name being truthy -->
+        <span ng-if='name'></span>{{ name }}</span>
+        <span ng-if='!name'>World</span>! 
+    </h1>
+    <input type="text" ng-model="name" placeholder='name'/>
+    <input type='text' ng-model='font' placeholder='font size + type'/>
+  </body>
+</html>
