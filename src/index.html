@@ -2,8 +2,12 @@
 <html lang="en" ng-app='try'>
   <head>
     <script src="./js/angular.min.js"></script>
-    <script src="./js/app/app.config.js"></script>
+    
     <script src="./js/app/app.module.js"></script>
+    <script src="./js/app/app.config.js"></script>
+     
+    <script src='./js/app/blog-list/blog-list.module.js'></script>
+    <script src='./js/app/blog-list/blog-list.component.js'></script>
 
     <style>
         .new-class {
@@ -25,5 +29,7 @@
     </h1>
     <input type="text" ng-model="name" placeholder='name'/>
     <input type='text' ng-model='font' placeholder='font size + type'/>
+
+    <div class='' ng-controller='BlogListController'></div>
   </body>
 </html>
