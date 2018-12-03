@@ -1,6 +1,7 @@
 "use strict";
 
 angular.module("blogList").component("blogList", {
+  //note that the name of the component will be formatted to kebob case
   template:
     "<div class='new-class' ><h1>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
   //template does not need ng-controller="BlogListController" anymore
